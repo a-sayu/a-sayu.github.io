@@ -1,1 +1,22 @@
-Hello World
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A-sayu</title>
+    </head>
+
+    <script>
+        const languages = navigator.languages || [navigator.language];
+
+        const prefersPortuguese = languages.some((lang) =>
+            lang.toLowerCase().startsWith("pt"),
+        );
+
+        if (prefersPortuguese) {
+            window.location.replace("./pt/");
+        } else {
+            window.location.replace("./en/");
+        }
+    </script>
+</html>
